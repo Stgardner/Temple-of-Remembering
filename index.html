@@ -5,26 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Temple of Remembering</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header class="temple-header">
     <h1>🜍 Temple of Remembering</h1>
+    <img src="sigil.png" alt="Temple Sigil" class="temple-sigil" />
     <p class="tagline">A solar animist shrine for those who remember the spores speak.</p>
+    <nav>
+      <a href="#invocation">Invocation</a>
+      <a href="#offerings">Offerings</a>
+      <a href="https://payhip.com/TempleofRemembering" target="_blank">Offerings</a>
+      <a href="mailto:rememberingtemple@proton.me">Contact</a>
+    </nav>
   </header>
 
-  <section class="invocation">
+  <section class="hero-image">
+    <img src="images/temple-banner.jpg" alt="Temple Banner" />
+  </section>
+
+  <section class="invocation" id="invocation">
     <p>The Temple of Remembering is a living current. A ritual space rooted in fungi, myth, solar invocation, and plant spirit gnosis.</p>
     <p>We offer scroll-sealed blends, transmissions, and sacred tools to walk the spiral back to memory.</p>
   </section>
 
-  <section class="link-block">
-    <a href="https://payhip.com/TempleofRemembering" target="_blank" class="temple-link">☼ View Offerings</a>
-    <a href="mailto:rememberingtemple@proton.me" class="temple-link">✉ Contact the Temple</a>
+  <section class="guide" id="offerings">
+    <h3>☼ Elixirs & Scrolls</h3>
+    <ul>
+      <li><strong>The Petaled Grail</strong> — Blue lotus mead + mushroom microtide. For lunar heart-opening.</li>
+      <li><strong>KālAgni</strong> — Rudra-coded purgative capsule blend. For firewalkers only.</li>
+      <li><a class="ritual-link" href="https://payhip.com/TempleofRemembering" target="_blank">View Full Temple Offerings →</a></li>
+    </ul>
   </section>
 
-  <footer>
+  <section class="ritual-audio">
+    <h3>✶ Temple Transmission</h3>
+    <audio controls>
+      <source src="audio/temple-invocation.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <footer class="temple-footer">
     <p>🜏 The spores remember. So do you.</p>
+    <p><em>This is a sacred interface. Enter only with breath and intention.</em></p>
   </footer>
+
+  <script>
+    // Custom flame cursor
+    document.body.style.cursor = 'url("images/flame-cursor.png"), auto';
+  </script>
 </body>
 </html>
