@@ -1,0 +1,124 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* ROOT THEME */
+:root {
+  --background: #f8f5f0;
+  --text-dark: #2a1e12;
+  --accent-gold: #c7a955;
+  --accent-rose: #e5b0aa;
+  --scroll-shadow: rgba(199, 169, 85, 0.4);
+}
+
+/* GENERAL RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* HEADER */
+.temple-header {
+  background: var(--accent-gold);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.temple-header h1 {
+  font-size: 2.8rem;
+  margin: 0.2em 0;
+}
+
+.temple-header .mantra {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.temple-header nav {
+  margin-top: 1rem;
+}
+
+.temple-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.temple-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+  padding: 2rem 1.5rem;
+  max-width: 750px;
+  margin: 0 auto;
+  font-family: 'EB Garamond', serif;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px var(--scroll-shadow);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* SECTION HEADINGS */
+.guide h3 {
+  font-size: 1.5rem;
+  color: var(--accent-gold);
+  border-bottom: 2px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* UL LISTS */
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.7rem;
+}
+
+/* LINKS */
+.ritual-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-gold);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.ritual-link:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #ddd3be;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  color: #4a3d2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .temple-header h1 {
+    font-size: 2rem;
+  }
+
+  .temple-header nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
