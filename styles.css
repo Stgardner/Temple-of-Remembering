@@ -27,6 +27,7 @@ body {
   text-align: center;
   padding: 2rem 1rem;
   font-family: 'EB Garamond', serif;
+  position: relative;
 }
 
 .temple-header h1 {
@@ -34,7 +35,14 @@ body {
   margin: 0.2em 0;
 }
 
-.temple-header .mantra {
+.temple-header .temple-sigil {
+  width: 80px;
+  margin: 1rem auto;
+  display: block;
+  opacity: 0.9;
+}
+
+.temple-header .tagline {
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-style: italic;
@@ -58,16 +66,34 @@ body {
   text-decoration: underline;
 }
 
+/* HERO IMAGE */
+.hero-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 3px solid var(--accent-gold);
+}
+
 /* SECTIONS */
 section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInScroll 1.5s ease forwards;
   padding: 2rem 1.5rem;
   max-width: 750px;
-  margin: 0 auto;
+  margin: 2rem auto;
   font-family: 'EB Garamond', serif;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 20px var(--scroll-shadow);
   border-radius: 10px;
-  margin-bottom: 2rem;
+}
+
+/* ANIMATION */
+@keyframes fadeInScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* SECTION HEADINGS */
@@ -88,7 +114,7 @@ ul li {
   margin-bottom: 0.7rem;
 }
 
-/* LINKS */
+/* RITUAL LINK */
 .ritual-link {
   display: inline-block;
   margin-top: 1rem;
@@ -102,13 +128,28 @@ ul li {
   text-decoration: underline;
 }
 
+/* AUDIO SECTION */
+.ritual-audio {
+  padding: 2rem 1.5rem;
+  max-width: 750px;
+  margin: 2rem auto;
+  font-family: 'EB Garamond', serif;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px var(--scroll-shadow);
+  border-radius: 10px;
+  text-align: center;
+}
+
 /* FOOTER */
-.footer {
-  background-color: #ddd3be;
+.temple-footer {
+  background-color: var(--accent-rose);
   text-align: center;
   font-size: 0.9rem;
-  padding: 1rem;
-  color: #4a3d2f;
+  padding: 1.5rem;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  color: var(--text-dark);
+  border-top: 2px solid var(--accent-gold);
 }
 
 /* RESPONSIVE */
@@ -116,7 +157,6 @@ ul li {
   .temple-header h1 {
     font-size: 2rem;
   }
-
   .temple-header nav a {
     display: block;
     margin: 0.5rem 0;
