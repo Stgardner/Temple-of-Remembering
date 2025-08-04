@@ -1,164 +1,86 @@
-/* FONT IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap');
-
-/* ROOT THEME */
-:root {
-  --background: #f8f5f0;
-  --text-dark: #2a1e12;
-  --accent-gold: #c7a955;
-  --accent-rose: #e5b0aa;
-  --scroll-shadow: rgba(199, 169, 85, 0.4);
-}
-
-/* GENERAL RESET */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--background);
-  color: var(--text-dark);
-  line-height: 1.7;
-}
-
-/* HEADER */
-.temple-header {
-  background: var(--accent-gold);
-  color: white;
+/* PASSWORD GATE */
+.gate {
   text-align: center;
-  padding: 2rem 1rem;
-  font-family: 'EB Garamond', serif;
-  position: relative;
-}
-
-.temple-header h1 {
-  font-size: 2.8rem;
-  margin: 0.2em 0;
-}
-
-.temple-header .temple-sigil {
-  width: 80px;
-  margin: 1rem auto;
-  display: block;
-  opacity: 0.9;
-}
-
-.temple-header .tagline {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-style: italic;
-  margin-bottom: 1em;
-}
-
-.temple-header nav {
-  margin-top: 1rem;
-}
-
-.temple-header nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.temple-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* HERO IMAGE */
-.hero-image img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-bottom: 3px solid var(--accent-gold);
-}
-
-/* SECTIONS */
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInScroll 1.5s ease forwards;
   padding: 2rem 1.5rem;
-  max-width: 750px;
+  max-width: 600px;
   margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px var(--scroll-shadow);
+  border-radius: 12px;
   font-family: 'EB Garamond', serif;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 20px var(--scroll-shadow);
+}
+
+.gate input[type="password"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 70%;
+  max-width: 300px;
+  margin: 1rem 0;
+  border: 2px solid var(--accent-gold);
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.gate button {
+  background-color: var(--accent-gold);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.gate button:hover {
+  background-color: #b89545;
+}
+
+/* OFFERINGS GRID */
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--accent-gold);
   border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 0 12px rgba(199, 169, 85, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'EB Garamond', serif;
 }
 
-/* ANIMATION */
-@keyframes fadeInScroll {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* SECTION HEADINGS */
-.guide h3 {
-  font-size: 1.5rem;
+.card h4 {
+  margin-top: 0;
   color: var(--accent-gold);
-  border-bottom: 2px solid var(--accent-gold);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
-/* UL LISTS */
-ul {
-  padding-left: 1.5rem;
+.card p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-ul li {
-  margin-bottom: 0.7rem;
-}
-
-/* RITUAL LINK */
-.ritual-link {
+.card a {
   display: inline-block;
   margin-top: 1rem;
   color: var(--accent-gold);
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
-.ritual-link:hover {
+.card a:hover {
   text-decoration: underline;
 }
 
-/* AUDIO SECTION */
-.ritual-audio {
-  padding: 2rem 1.5rem;
-  max-width: 750px;
-  margin: 2rem auto;
-  font-family: 'EB Garamond', serif;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 20px var(--scroll-shadow);
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* FOOTER */
-.temple-footer {
-  background-color: var(--accent-rose);
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1.5rem;
-  font-family: 'EB Garamond', serif;
-  font-style: italic;
-  color: var(--text-dark);
-  border-top: 2px solid var(--accent-gold);
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .temple-header h1 {
-    font-size: 2rem;
-  }
-  .temple-header nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
+.card:hover {
+  box-shadow: 0 0 20px rgba(199, 169, 85, 0.5);
+  transform: scale(1.02);
 }
