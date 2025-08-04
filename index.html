@@ -16,7 +16,6 @@
     <nav>
       <a href="#invocation">Invocation</a>
       <a href="#offerings">Offerings</a>
-      <a href="https://payhip.com/TempleofRemembering" target="_blank">Offerings</a>
       <a href="mailto:rememberingtemple@proton.me">Contact</a>
     </nav>
   </header>
@@ -30,15 +29,37 @@
     <p>We offer scroll-sealed blends, transmissions, and sacred tools to walk the spiral back to memory.</p>
   </section>
 
-  <section class="guide" id="offerings">
-    <h3>☼ Elixirs & Scrolls</h3>
-    <ul>
-      <li><strong>The Petaled Grail</strong> — Blue lotus mead + mushroom microtide. For lunar heart-opening.</li>
-      <li><strong>KālAgni</strong> — Rudra-coded purgative capsule blend. For firewalkers only.</li>
-      <li><a class="ritual-link" href="https://payhip.com/TempleofRemembering" target="_blank">View Full Temple Offerings →</a></li>
-    </ul>
+  <!-- 🜏 Password Gate -->
+  <section class="gate">
+    <h3>Enter the Temple</h3>
+    <p>Whisper the mantra to unlock the altar.</p>
+    <input type="password" id="pw" placeholder="Enter mantra..." />
+    <button onclick="checkPassword()">Enter</button>
   </section>
 
+  <!-- 🜍 Offerings Section (Hidden until unlocked) -->
+  <section class="offerings-section" id="offerings" style="display:none;">
+    <h3>☼ Temple Offerings</h3>
+    <div class="offerings-grid">
+      <div class="card">
+        <h4>The Petaled Grail</h4>
+        <p>Blue lotus mead + mushroom microtide. Lunar heart-opener.</p>
+        <a href="https://payhip.com/TempleofRemembering" target="_blank">View Offering →</a>
+      </div>
+      <div class="card">
+        <h4>KālAgni</h4>
+        <p>Rudra-coded capsule blend. For firewalkers only.</p>
+        <a href="https://payhip.com/TempleofRemembering" target="_blank">View Offering →</a>
+      </div>
+      <div class="card">
+        <h4>Total Recall</h4>
+        <p>Neural flame blend: GT, lion’s mane, cacao, pepper, coriander.</p>
+        <a href="https://payhip.com/TempleofRemembering" target="_blank">View Offering →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✶ Audio Transmission -->
   <section class="ritual-audio">
     <h3>✶ Temple Transmission</h3>
     <audio controls>
@@ -53,8 +74,20 @@
   </footer>
 
   <script>
-    // Custom flame cursor
+    function checkPassword() {
+      const input = document.getElementById('pw').value;
+      const passphrase = "remember"; // ✦ set your mantra/password here
+      if (input.toLowerCase() === passphrase) {
+        document.querySelector('.gate').style.display = 'none';
+        document.getElementById('offerings').style.display = 'block';
+      } else {
+        alert("The mantra is not correct.");
+      }
+    }
+
+    // Optional: flame cursor
     document.body.style.cursor = 'url("images/flame-cursor.png"), auto';
   </script>
+
 </body>
 </html>
